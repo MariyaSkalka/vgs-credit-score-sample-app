@@ -1,0 +1,11 @@
+{
+    "name": "vgs-credit-score-sample-app",
+    "success_url": "/",
+    "env": {
+      "FLASK_APP": {
+        "description": "Specify the Flask app entry point file to run.",
+        "value": "autoapp.py"
+      }
+    }
+  }
+  
