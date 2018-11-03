@@ -10,9 +10,9 @@ def index():
     return 'ok'
 
 
-@app.route('/credit-score')
+@app.route('/credit-score', methods=['POST'])
 def credit_score():
-    ssn = request.args['ssn']
+    ssn = request.form['ssn']
     hashed = hashlib.sha1(ssn.encode('utf8'))
     credit_score = 100 + int(hashed.hexdigest(), 16) % 750
     return jsonify(
